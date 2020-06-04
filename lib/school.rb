@@ -10,25 +10,24 @@ class School
 
   def add_student(name, grades)
   # grades is key and name is value
-   if roster[grades] 
+   if @roster[grades] 
     # binding.pry
-    roster[grades] << name
+    @roster[grades] << name
    else 
-    roster[grades] = []
-    roster[grades] << name
+    @roster[grades] = []
+    @roster[grades] << name
    end
   end 
 
   def grade(grades)
-    roster.include?(grades)
-    roster[grades]
+    # roster.include?(grades)
+    @roster[grades]
     #  binding.pry
   end
 
   def sort
-     new_roster = {}
-     roster.each do |k,v|
-      roster[k] = v.sort
+     @roster.each do |k,v|
+      @roster[k] = v.sort
 
 # binding.pry
      end
